@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Health Diagnosis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f2f5;
+      padding-top: 40px;
+    }
+    .container {
+      max-width: 700px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center mb-4">Smart Health Diagnosis</h2>
+    <form id="diagnosisForm" action="result.html" method="GET">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" class="form-control" id="age" name="age" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <select id="gender" name="gender" class="form-select" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="bp" class="form-label">Blood Pressure</label>
+        <select id="bp" name="bp" class="form-select" required>
+          <option value="">Select BP Level</option>
+          <option value="normal">Normal (120/80)</option>
+          <option value="high">High (140/90 or more)</option>
+          <option value="low">Low (90/60 or less)</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="sugar" class="form-label">Blood Sugar Level</label>
+        <select id="sugar" name="sugar" class="form-select" required>
+          <option value="">Select Sugar Level</option>
+          <option value="normal">Normal (&lt;140 mg/dL)</option>
+          <option value="high">High (&gt;200 mg/dL)</option>
+          <option value="pre-diabetic">Borderline (140-199 mg/dL)</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="symptoms" class="form-label">Symptoms</label>
+        <select id="symptoms" name="symptoms" class="form-select" multiple required>
+          <option value="fever">Fever</option>
+          <option value="cough">Cough</option>
+          <option value="headache">Headache</option>
+          <option value="nausea">Nausea</option>
+          <option value="fatigue">Fatigue</option>
+          <option value="dizziness">Dizziness</option>
+          <option value="shortness of breath">Shortness of breath</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="history" class="form-label">Medical History</label>
+        <select id="history" name="history" class="form-select" multiple>
+          <option value="diabetes">Diabetes</option>
+          <option value="hypertension">Hypertension</option>
+          <option value="asthma">Asthma</option>
+          <option value="heart disease">Heart Disease</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="lifestyle" class="form-label">Lifestyle Info</label>
+        <select id="lifestyle" name="lifestyle" class="form-select" multiple>
+          <option value="smoker">Smoker</option>
+          <option value="alcohol">Alcohol Consumption</option>
+          <option value="active">Physically Active</option>
+          <option value="sedentary">Sedentary</option>
+          <option value="low sleep">Low Sleep (&lt;6 hrs)</option>
+          <option value="high screen">High Screen Time</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100">Diagnose</button>
+    </form>
+  </div>
+</body>
+</html>
